@@ -1,0 +1,9 @@
+main: com.islandsurvive.main.Core
+version: 1.0
+name: IslandSurviveCore
+
+commands:
+  profile:
+    description: Opens your Player Profile, displaying your statistics
+  refer:
+    description: Refer a player on the server
