@@ -52,8 +52,8 @@ public class Profile implements CommandExecutor {
 			playerSkullMeta.setOwner(player.getName());
 			playerSkullMeta.setDisplayName(C.green + "Player Information");
 			playerSkullMeta.setLore(Arrays.asList(C.gray + "Dated Joined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".DateJoined"), 
-					C.gray + "Diamonds Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".DiamondCount"), 
 					C.gray + "Referal Count: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".ReferalCount")));
+			
 			skull.setItemMeta(playerSkullMeta);
 			
 			// Mining \\

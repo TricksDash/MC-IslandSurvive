@@ -12,9 +12,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.islandsurvive.commands.Profile;
 import com.islandsurvive.commands.Refer;
 import com.islandsurvive.events.BlocksDestroyed;
-import com.islandsurvive.events.CoalBreakTimer;
 import com.islandsurvive.events.FirstJoin;
 import com.islandsurvive.events.ProfileEvents;
+import com.islandsurvive.events.cooldowns.CoalOreBreakCD;
+import com.islandsurvive.events.cooldowns.DiamondOreBreakCD;
+import com.islandsurvive.events.cooldowns.EmeraldOreBreakCD;
+import com.islandsurvive.events.cooldowns.GoldOreBreakCD;
+import com.islandsurvive.events.cooldowns.IronOreBreakCD;
 
 import net.milkbowl.vault.economy.Economy;
 
@@ -56,7 +60,11 @@ public void registerEvents() {
 	//pm.registerEvents(new BlocksDestroyed(this), this);
 	pm.registerEvents(new FirstJoin(this), this);
 	pm.registerEvents(new ProfileEvents(), this);
-	pm.registerEvents(new CoalBreakTimer(this), this);
+	pm.registerEvents(new CoalOreBreakCD(this), this);
+	pm.registerEvents(new IronOreBreakCD(this), this);
+	pm.registerEvents(new GoldOreBreakCD(this), this);
+	pm.registerEvents(new DiamondOreBreakCD(this), this);
+	pm.registerEvents(new EmeraldOreBreakCD(this), this);
 }
 
 public void registerConfig() {

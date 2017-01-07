@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -34,6 +36,10 @@ public class FirstJoin implements Listener {
 			player.sendMessage(C.green + "Use /Website for Website information");
 			player.sendMessage(C.green + "Use /Staff for Staff information");
 			player.sendMessage(C.green + "Use /Help for Server information");
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, -475, 133, -68);
+			player.teleport(loc);
 			
 		}
 	}

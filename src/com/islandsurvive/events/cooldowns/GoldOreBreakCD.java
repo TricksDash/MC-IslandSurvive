@@ -1,4 +1,4 @@
-package com.islandsurvive.events;
+package com.islandsurvive.events.cooldowns;
 
 import java.util.HashMap;
 
@@ -16,11 +16,11 @@ import com.islandsurvive.main.Core;
 
 import net.milkbowl.vault.economy.Economy;
 
-public class CoalBreakTimer implements Listener {
+public class GoldOreBreakCD implements Listener {
 	
 	private Core plugin;
 	
-	public CoalBreakTimer(Core pl) {
+	public GoldOreBreakCD(Core pl) {
 		plugin = pl;
 		
 	}
@@ -40,32 +40,32 @@ public class CoalBreakTimer implements Listener {
 			
 			
 			Economy eco = Core.eco;
-			if(block.getType() == Material.COAL_ORE) {
+			if(block.getType() == Material.GOLD_ORE) {
 								
 							if(cooldownTime.containsKey(player)) {
 								
-								if(block.getType()  == Material.COAL_ORE){
+								if(block.getType()  == Material.GOLD_ORE){
 									event.setCancelled(true);
-									player.sendMessage(C.gray + "[" + C.red +  cooldownTime.get(player) + C.gray + "] " + C.green +  "Seconds until you can break another Coal Ore");
+									player.sendMessage(C.gray + "[" + C.red +  cooldownTime.get(player) + C.gray + "] " + C.yellow +  "Seconds until you can break another " + C.dred +  block.getType());
 								}
 
 								return;
 							}
-							player.sendMessage(C.gray + "[" + C.gold + "+5 Coins" + C.gray + "]");
-							eco.depositPlayer(player, 5);
+							player.sendMessage(C.gray + "[" + C.gold + "+20 Coins" + C.gray + "]");
+							eco.depositPlayer(player, 20);
 							
-							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".CoalCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".CoalCount", 0) + 1);
+							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".GoldCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".GoldCount", 0) + 1);
 							plugin.saveConfig();
 							
-							player.sendMessage(C.gray + "[" + C.gold + "+1" + C.gray + "]" + C.dgray +  " Coal Found");
+							player.sendMessage(C.gray + "[" + C.gold + "+1" + C.gray + "] " + C.dgray +  block.getType() + " found!");
 
-							cooldownTime.put(player, 60);
+							cooldownTime.put(player, 300);
 							cooldownTask.put(player, new BukkitRunnable() {
 								public void run() {
 									cooldownTime.put(player, cooldownTime.get(player) - 1);
 									event.setCancelled(true);
 									if(cooldownTime.get(player) == 0) {
-										block.setTypeId(16);
+										block.setTypeId(14);
 										cooldownTime.remove(player);
 										cooldownTask.remove(player);
 										cancel();
