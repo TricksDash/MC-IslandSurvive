@@ -52,7 +52,9 @@ public class Profile implements CommandExecutor {
 			playerSkullMeta.setOwner(player.getName());
 			playerSkullMeta.setDisplayName(C.green + "Player Information");
 			playerSkullMeta.setLore(Arrays.asList(C.gray + "Dated Joined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".DateJoined"), 
-					C.gray + "Referal Count: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".ReferalCount")));
+					C.gray + "Referal Count: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".ReferedCount"),
+					C.gray + "Mining Rank: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level")));
+
 			
 			skull.setItemMeta(playerSkullMeta);
 			
@@ -64,11 +66,12 @@ public class Profile implements CommandExecutor {
 					C.gray + "Quartz Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".QuartzCount"),
 					C.gray + "Lapis Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".LapisCount"),
 					C.gray + "Redstone Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".RedstoneCount"),
-					C.gray + "Diamonds Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".DiamondCount"), 
 					C.gray + "Emeralds Mined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".EmeraldCount"), 
+					C.gray + "Diamonds Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".DiamondCount"), 
 					C.gray + "Gold Mined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".GoldCount"), 
 					C.gray + "Iron Mined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".IronCount"), 
 					C.gray + "Coal Mined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".CoalCount")));
+			
 			mining.setItemMeta(miningMeta);
 			
 			playerProfile.setItem(1, skull);

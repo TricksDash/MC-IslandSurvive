@@ -13,6 +13,7 @@ import com.islandsurvive.commands.Profile;
 import com.islandsurvive.commands.Refer;
 import com.islandsurvive.commands.Upgrade;
 import com.islandsurvive.events.BlocksDestroyed;
+import com.islandsurvive.events.ColoredNames;
 import com.islandsurvive.events.FirstJoin;
 import com.islandsurvive.events.GoldPlateTrigger;
 import com.islandsurvive.events.ProfileEvents;
@@ -75,6 +76,7 @@ public void registerEvents() {
 	pm.registerEvents(new RedstoneOreBreakCD(this), this);
 	pm.registerEvents(new QuartzOreBreakCD(this), this);
 	pm.registerEvents(new GoldPlateTrigger(this), this);
+	pm.registerEvents(new ColoredNames(), this);
 }
 
 public void registerConfig() {

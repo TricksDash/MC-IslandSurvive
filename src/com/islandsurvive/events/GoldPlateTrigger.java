@@ -9,6 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
 
 import com.islandsurvive.main.C;
 import com.islandsurvive.main.Core;
@@ -35,10 +36,12 @@ public class GoldPlateTrigger implements Listener {
 			
 			World Skyworld = Bukkit.getWorld("Skyworld");
 			Location loc = new Location(Skyworld, -508, 146, 182);
+			loc.setYaw(180);
 			player.teleport(loc);
-
 			
+			player.getInventory().addItem(new ItemStack(Material.WOOD_PICKAXE));
+			player.getInventory().addItem(new ItemStack(Material.WOOD_PICKAXE));
+			player.getInventory().addItem(new ItemStack(Material.COOKED_BEEF, 10));
 		}
 	}
-
 }
