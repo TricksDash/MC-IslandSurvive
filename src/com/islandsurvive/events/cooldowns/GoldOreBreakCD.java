@@ -51,7 +51,9 @@ public class GoldOreBreakCD implements Listener {
 
 								return;
 							}
+							player.sendMessage(" ");
 							player.sendMessage(C.gray + "[" + C.gold + "+20 Coins" + C.gray + "]");
+							player.sendMessage(" ");
 							eco.depositPlayer(player, 20);
 							
 							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".GoldCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".GoldCount", 0) + 1);

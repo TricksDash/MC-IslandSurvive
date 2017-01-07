@@ -51,21 +51,23 @@ public class EmeraldOreBreakCD implements Listener {
 
 								return;
 							}
-							player.sendMessage(C.gray + "[" + C.gold + "+20 Coins" + C.gray + "]");
-							eco.depositPlayer(player, 20);
+							player.sendMessage(" ");
+							player.sendMessage(C.gray + "[" + C.gold + "+100 Coins" + C.gray + "]");
+							player.sendMessage(" ");
+							eco.depositPlayer(player, 100);
 							
 							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".EmeraldCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".EmeraldCount", 0) + 1);
 							plugin.saveConfig();
 							
 							player.sendMessage(C.gray + "[" + C.gold  + "+1" + C.gray + "] " + C.dgray +  block.getType() + " found!");
 
-							cooldownTime.put(player, 1200);
+							cooldownTime.put(player, 800);
 							cooldownTask.put(player, new BukkitRunnable() {
 								public void run() {
 									cooldownTime.put(player, cooldownTime.get(player) - 1);
 									event.setCancelled(true);
 									if(cooldownTime.get(player) == 0) {
-										block.setTypeId(14);
+										block.setTypeId(129);
 										cooldownTime.remove(player);
 										cooldownTask.remove(player);
 										cancel();

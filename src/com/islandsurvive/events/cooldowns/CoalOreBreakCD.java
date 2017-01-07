@@ -51,7 +51,9 @@ public class CoalOreBreakCD implements Listener {
 
 								return;
 							}
+							player.sendMessage(" ");
 							player.sendMessage(C.gray + "[" + C.gold + "+5 Coins" + C.gray + "]");
+							player.sendMessage(" ");
 							eco.depositPlayer(player, 5);
 							
 							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".CoalCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".CoalCount", 0) + 1);

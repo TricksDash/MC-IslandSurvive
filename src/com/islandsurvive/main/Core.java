@@ -19,6 +19,9 @@ import com.islandsurvive.events.cooldowns.DiamondOreBreakCD;
 import com.islandsurvive.events.cooldowns.EmeraldOreBreakCD;
 import com.islandsurvive.events.cooldowns.GoldOreBreakCD;
 import com.islandsurvive.events.cooldowns.IronOreBreakCD;
+import com.islandsurvive.events.cooldowns.LapisOreBreakCD;
+import com.islandsurvive.events.cooldowns.QuartzOreBreakCD;
+import com.islandsurvive.events.cooldowns.RedstoneOreBreakCD;
 
 import net.milkbowl.vault.economy.Economy;
 
@@ -65,6 +68,9 @@ public void registerEvents() {
 	pm.registerEvents(new GoldOreBreakCD(this), this);
 	pm.registerEvents(new DiamondOreBreakCD(this), this);
 	pm.registerEvents(new EmeraldOreBreakCD(this), this);
+	pm.registerEvents(new LapisOreBreakCD(this), this);
+	pm.registerEvents(new RedstoneOreBreakCD(this), this);
+	pm.registerEvents(new QuartzOreBreakCD(this), this);
 }
 
 public void registerConfig() {

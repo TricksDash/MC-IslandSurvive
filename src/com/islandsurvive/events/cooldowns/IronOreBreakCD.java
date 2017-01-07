@@ -51,7 +51,9 @@ public class IronOreBreakCD implements Listener {
 
 								return;
 							}
+							player.sendMessage(" ");
 							player.sendMessage(C.gray + "[" + C.gold + "+10 Coins" + C.gray + "]");
+							player.sendMessage(" ");
 							eco.depositPlayer(player, 10);
 							
 							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".IronCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".IronCount", 0) + 1);

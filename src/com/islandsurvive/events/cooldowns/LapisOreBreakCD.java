@@ -16,11 +16,11 @@ import com.islandsurvive.main.Core;
 
 import net.milkbowl.vault.economy.Economy;
 
-public class DiamondOreBreakCD implements Listener {
+public class LapisOreBreakCD implements Listener {
 	
 	private Core plugin;
 	
-	public DiamondOreBreakCD(Core pl) {
+	public LapisOreBreakCD(Core pl) {
 		plugin = pl;
 		
 	}
@@ -40,11 +40,11 @@ public class DiamondOreBreakCD implements Listener {
 			
 			
 			Economy eco = Core.eco;
-			if(block.getType() == Material.DIAMOND_ORE) {
+			if(block.getType() == Material.LAPIS_ORE) {
 								
 							if(cooldownTime.containsKey(player)) {
 								
-								if(block.getType()  == Material.DIAMOND_ORE){
+								if(block.getType()  == Material.LAPIS_ORE){
 									event.setCancelled(true);
 									player.sendMessage(C.gray + "[" + C.red +  cooldownTime.get(player) + C.gray + "] " + C.yellow +  "Seconds until you can break another " + C.dred +  block.getType());
 								}
@@ -52,22 +52,22 @@ public class DiamondOreBreakCD implements Listener {
 								return;
 							}
 							player.sendMessage(" ");
-							player.sendMessage(C.gray + "[" + C.gold + "+50 Coins" + C.gray + "]");
+							player.sendMessage(C.gray + "[" + C.gold + "+300 Coins" + C.gray + "]");
 							player.sendMessage(" ");
-							eco.depositPlayer(player, 50);
+							eco.depositPlayer(player, 300);
 							
-							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".DiamondCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".DiamondCount", 0) + 1);
+							plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".LapisCount", plugin.getConfig().getInt("Player-Data." + player.getUniqueId() + ".LapisCount", 0) + 1);
 							plugin.saveConfig();
 							
 							player.sendMessage(C.gray + "[" + C.gold  + "+1" + C.gray + "] " + C.dgray +  block.getType() + " found!");
 
-							cooldownTime.put(player, 600);
+							cooldownTime.put(player, 1100);
 							cooldownTask.put(player, new BukkitRunnable() {
 								public void run() {
 									cooldownTime.put(player, cooldownTime.get(player) - 1);
 									event.setCancelled(true);
 									if(cooldownTime.get(player) == 0) {
-										block.setTypeId(56);
+										block.setTypeId(21);
 										cooldownTime.remove(player);
 										cooldownTask.remove(player);
 										cancel();

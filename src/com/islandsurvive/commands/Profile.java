@@ -60,7 +60,11 @@ public class Profile implements CommandExecutor {
 			ItemStack mining= new ItemStack(Material.IRON_ORE);
 			ItemMeta miningMeta= mining.getItemMeta();
 			miningMeta.setDisplayName(C.green + "Stats");
-			miningMeta.setLore(Arrays.asList(C.gray + "Diamonds Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".DiamondCount"), 
+			miningMeta.setLore(Arrays.asList(
+					C.gray + "Quartz Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".QuartzCount"),
+					C.gray + "Lapis Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".LapisCount"),
+					C.gray + "Redstone Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".RedstoneCount"),
+					C.gray + "Diamonds Mined: " + C.gold +  plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".DiamondCount"), 
 					C.gray + "Emeralds Mined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".EmeraldCount"), 
 					C.gray + "Gold Mined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".GoldCount"), 
 					C.gray + "Iron Mined: " + C.gold + plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".IronCount"), 
