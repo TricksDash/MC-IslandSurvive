@@ -29,7 +29,9 @@ public class FirstJoin implements Listener {
 		
 		if(!player.hasPlayedBefore()) {
 			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".DateJoined", new SimpleDateFormat("dd/MM/yy").format(new Date()));
-			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".NameWhenJoined", player.getName());plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".Refered", false);			plugin.saveConfig();
+			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".SpawnPlateTrigger", false);
+			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".NameWhenJoined", player.getName());plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".Refered", false);			
+			plugin.saveConfig();
 			
 			Bukkit.broadcastMessage(C.red + "Welcome " + C.gold + player.getName() + C.red + " to IslandSurvive!");
 			player.sendMessage(C.green + "Use /Donate for Website information");
@@ -37,11 +39,12 @@ public class FirstJoin implements Listener {
 			player.sendMessage(C.green + "Use /Staff for Staff information");
 			player.sendMessage(C.green + "Use /Help for Server information");
 			
+		if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".SpawnPlateTrigger").equals(false));
+			
 			World Skyworld = Bukkit.getWorld("Skyworld");
 			Location loc = new Location(Skyworld, -475, 133, -68);
 			player.teleport(loc);
 			
 		}
 	}
-
 }
