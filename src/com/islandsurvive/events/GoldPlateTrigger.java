@@ -28,6 +28,7 @@ public class GoldPlateTrigger implements Listener {
 		if(event.getAction().equals(Action.PHYSICAL) && (event.getClickedBlock().getType() == Material.GOLD_PLATE)){
 			
 			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".SpawnPlateTrigger", true);
+			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".Level", "Coal");
 			plugin.saveConfig();
 			
 			player.sendMessage(C.gold + "Congratulations! You are now ready to play.");

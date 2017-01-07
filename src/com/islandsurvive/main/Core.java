@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.islandsurvive.commands.Profile;
 import com.islandsurvive.commands.Refer;
+import com.islandsurvive.commands.Upgrade;
 import com.islandsurvive.events.BlocksDestroyed;
 import com.islandsurvive.events.FirstJoin;
 import com.islandsurvive.events.GoldPlateTrigger;
@@ -56,7 +57,8 @@ public void onDisable() {
 public void registerCommands() {
 	getCommand("profile").setExecutor(new Profile(this));
 	getCommand("refer").setExecutor(new Refer(this));
-	}
+	getCommand("upgrade").setExecutor(new Upgrade(this));
+}
 
 public void registerEvents() {
 	PluginManager pm = getServer().getPluginManager();

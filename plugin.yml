@@ -7,3 +7,5 @@ commands:
     description: Opens your Player Profile, displaying your statistics
   refer:
     description: Refer a player on the server
+  upgrade:
+    description: Upgrades your Mining area

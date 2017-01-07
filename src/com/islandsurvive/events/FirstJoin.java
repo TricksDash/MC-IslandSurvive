@@ -31,6 +31,7 @@ public class FirstJoin implements Listener {
 			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".DateJoined", new SimpleDateFormat("dd/MM/yy").format(new Date()));
 			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".SpawnPlateTrigger", false);
 			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".NameWhenJoined", player.getName());plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".Refered", false);			
+			plugin.getConfig().set("Player-Data." + player.getUniqueId() + ".Level", "coal");
 			plugin.saveConfig();
 			
 			Bukkit.broadcastMessage(C.red + "Welcome " + C.gold + player.getName() + C.red + " to IslandSurvive!");
