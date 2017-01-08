@@ -21,7 +21,7 @@ import com.islandsurvive.events.ColoredNames;
 import com.islandsurvive.events.FirstJoin;
 import com.islandsurvive.events.GoldPlateTrigger;
 import com.islandsurvive.events.ProfileEvents;
-import com.islandsurvive.events.StopBlockBreak;
+import com.islandsurvive.events.BlockProtection;
 import com.islandsurvive.events.cooldowns.CoalOreBreakCD;
 import com.islandsurvive.events.cooldowns.DiamondOreBreakCD;
 import com.islandsurvive.events.cooldowns.EmeraldOreBreakCD;
@@ -90,7 +90,7 @@ public void registerEvents() {
 	pm.registerEvents(new QuartzOreBreakCD(this), this);
 	pm.registerEvents(new GoldPlateTrigger(this), this);
 	pm.registerEvents(new ColoredNames(), this);
-	pm.registerEvents(new StopBlockBreak(this), this);
+	pm.registerEvents(new BlockProtection(this), this);
 }
 
 public void registerConfig() {
