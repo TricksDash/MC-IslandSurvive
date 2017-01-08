@@ -41,10 +41,10 @@ public class Island implements CommandExecutor {
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Iron")) {
 
 		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold+ "Teleporting to" + C.white + " Iron " + C.gold + "Island!");
-		
+
 		World Skyworld = Bukkit.getWorld("Skyworld");
-		Location loc = new Location(Skyworld, -508, 146, 182);
-		loc.setYaw(180);
+		Location loc = new Location(Skyworld, -85, 162, 116);
+		loc.setYaw(150);
 		player.teleport(loc);
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Gold")) {
@@ -52,8 +52,8 @@ public class Island implements CommandExecutor {
 		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.gold + " Gold " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
-		Location loc = new Location(Skyworld, -508, 146, 182);
-		loc.setYaw(180);
+		Location loc = new Location(Skyworld, -58, 178, 272);
+		loc.setYaw(0);
 		player.teleport(loc);
 	
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Diamond")) {
@@ -61,8 +61,8 @@ public class Island implements CommandExecutor {
 		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.aqua + " Diamond " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
-		Location loc = new Location(Skyworld, -508, 146, 182);
-		loc.setYaw(180);
+		Location loc = new Location(Skyworld, 11, 84, 243);
+		loc.setYaw(-180);
 		player.teleport(loc);
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Emerald")) {
@@ -70,8 +70,8 @@ public class Island implements CommandExecutor {
 		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.green + " Emerald " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
-		Location loc = new Location(Skyworld, -508, 146, 182);
-		loc.setYaw(180);
+		Location loc = new Location(Skyworld, -40, 67, 335);
+		loc.setYaw(23);
 		player.teleport(loc);
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Redstone")) {
@@ -79,8 +79,8 @@ public class Island implements CommandExecutor {
 		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold+ "Teleporting to" + C.red + " Redstone " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
-		Location loc = new Location(Skyworld, -508, 146, 182);
-		loc.setYaw(180);
+		Location loc = new Location(Skyworld, -135, 102, 273);
+		loc.setYaw(-80);
 		player.teleport(loc);
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Lapis")) {
@@ -88,8 +88,8 @@ public class Island implements CommandExecutor {
 		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.blue + " Lapis " + C.gold+ "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
-		Location loc = new Location(Skyworld, -508, 146, 182);
-		loc.setYaw(180);
+		Location loc = new Location(Skyworld, -97, 204, 600);
+		loc.setYaw(90);
 		player.teleport(loc);
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Quartz")) {
@@ -97,8 +97,8 @@ public class Island implements CommandExecutor {
 		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold+ "Teleporting to" + C.gray + " Quartz " + C.gold+ "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
-		Location loc = new Location(Skyworld, -508, 146, 182);
-		loc.setYaw(180);
+		Location loc = new Location(Skyworld, 263, 124, 165);
+		loc.setYaw(147);
 		player.teleport(loc);
 	}
 		

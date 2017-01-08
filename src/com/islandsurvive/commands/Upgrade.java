@@ -1,5 +1,8 @@
 package com.islandsurvive.commands;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -38,8 +41,12 @@ public class Upgrade implements CommandExecutor {
 			
 			player.sendMessage(C.gray + "[" + C.gold + "-500 Coins" + C.gray + "]");
 			player.sendMessage(C.gray + "[" + C.red + "Upgrade" + C.gray + "]: " + C.gold + "You have been upgraded to " + C.white + "Iron!");
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, -85, 162, 116);
+			loc.setYaw(150);
+			player.teleport(loc);
 
-		
 		}else{
 			player.sendMessage(C.red + "You do not have enough Coins!");
 		}
@@ -52,8 +59,12 @@ public class Upgrade implements CommandExecutor {
 			
 			player.sendMessage(C.gray + "[" + C.gold + "-1000 Coins" + C.gray + "]");
 			player.sendMessage(C.gray + "[" + C.red + "Upgrade" + C.gray + "]: " + C.gold + "You have been upgraded to " + C.gold + "Gold!");
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, -58, 178, 272);
+			loc.setYaw(0);
+			player.teleport(loc);
 
-		
 		}else{
 			player.sendMessage(C.red + "You do not have enough Coins!");
 		}
@@ -66,7 +77,11 @@ public class Upgrade implements CommandExecutor {
 			
 			player.sendMessage(C.gray + "[" + C.gold + "-2000 Coins" + C.gray + "]");
 			player.sendMessage(C.gray + "[" + C.red + "Upgrade" + C.gray + "]: " + C.gold + "You have been upgraded to " + C.aqua + "Diamond!");
-
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, 11, 84, 243);
+			loc.setYaw(-180);
+			player.teleport(loc);
 		
 		}else{
 			player.sendMessage(C.red + "You do not have enough Coins!");
@@ -80,8 +95,12 @@ public class Upgrade implements CommandExecutor {
 			
 			player.sendMessage(C.gray + "[" + C.gold + "-4000 Coins" + C.gray + "]");
 			player.sendMessage(C.gray + "[" + C.red + "Upgrade" + C.gray + "]: " + C.gold + "You have been upgraded to " + C.green + "Emerald!");
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, -40, 67, 335);
+			loc.setYaw(23);
+			player.teleport(loc);
 
-		
 		}else{
 			player.sendMessage(C.red + "You do not have enough Coins!");
 		}
@@ -94,7 +113,11 @@ public class Upgrade implements CommandExecutor {
 			
 			player.sendMessage(C.gray + "[" + C.gold + "-8000 Coins" + C.gray + "]");
 			player.sendMessage(C.gray + "[" + C.red + "Upgrade" + C.gray + "]: " + C.gold + "You have been upgraded to " + C.red + "Redstone!");
-
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, -135, 102, 273);
+			loc.setYaw(-80);
+			player.teleport(loc);
 		
 		}else{
 			player.sendMessage(C.red + "You do not have enough Coins!");
@@ -108,8 +131,12 @@ public class Upgrade implements CommandExecutor {
 			
 			player.sendMessage(C.gray + "[" + C.gold + "-16000 Coins" + C.gray + "]");
 			player.sendMessage(C.gray + "[" + C.red + "Upgrade" + C.gray + "]: " + C.gold + "You have been upgraded to " + C.blue + "Lapis!");
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, -97, 204, 600);
+			loc.setYaw(90);
+			player.teleport(loc);
 
-		
 		}else{
 			player.sendMessage(C.red + "You do not have enough Coins!");
 		}
@@ -122,7 +149,11 @@ public class Upgrade implements CommandExecutor {
 			
 			player.sendMessage(C.gray + "[" + C.gold + "-32000 Coins" + C.gray + "]");
 			player.sendMessage(C.gray + "[" + C.red + "Upgrade" + C.gray + "]: " + C.gold + "You have been upgraded to " + C.gray + "Quartz!");
-
+			
+			World Skyworld = Bukkit.getWorld("Skyworld");
+			Location loc = new Location(Skyworld, 263, 124, 165);
+			loc.setYaw(147);
+			player.teleport(loc);
 		
 		}else{
 			player.sendMessage(C.red + "You do not have enough Coins!");
