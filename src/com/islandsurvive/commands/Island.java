@@ -31,7 +31,7 @@ public class Island implements CommandExecutor {
 		
 	if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Coal")) {
 
-			player.sendMessage(C.yellow + "Teleporting to" + C.gray + " Coal " + C.yellow + "Island!");
+			player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.gray + " Coal " + C.gold + "Island!");
 			
 			World Skyworld = Bukkit.getWorld("Skyworld");
 			Location loc = new Location(Skyworld, -508, 146, 182);
@@ -40,7 +40,7 @@ public class Island implements CommandExecutor {
 
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Iron")) {
 
-		player.sendMessage(C.yellow + "Teleporting to" + C.white + " Iron " + C.yellow + "Island!");
+		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold+ "Teleporting to" + C.white + " Iron " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
 		Location loc = new Location(Skyworld, -508, 146, 182);
@@ -49,7 +49,7 @@ public class Island implements CommandExecutor {
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Gold")) {
 
-		player.sendMessage(C.yellow + "Teleporting to" + C.gold + " Gold " + C.yellow + "Island!");
+		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.gold + " Gold " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
 		Location loc = new Location(Skyworld, -508, 146, 182);
@@ -58,7 +58,7 @@ public class Island implements CommandExecutor {
 	
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Diamond")) {
 
-		player.sendMessage(C.yellow + "Teleporting to" + C.aqua + " Diamond " + C.yellow + "Island!");
+		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.aqua + " Diamond " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
 		Location loc = new Location(Skyworld, -508, 146, 182);
@@ -67,7 +67,7 @@ public class Island implements CommandExecutor {
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Emerald")) {
 
-		player.sendMessage(C.yellow + "Teleporting to" + C.green + " Emerald " + C.yellow + "Island!");
+		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.green + " Emerald " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
 		Location loc = new Location(Skyworld, -508, 146, 182);
@@ -76,7 +76,7 @@ public class Island implements CommandExecutor {
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Redstone")) {
 
-		player.sendMessage(C.yellow + "Teleporting to" + C.red + " Redstone " + C.yellow + "Island!");
+		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold+ "Teleporting to" + C.red + " Redstone " + C.gold + "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
 		Location loc = new Location(Skyworld, -508, 146, 182);
@@ -85,7 +85,7 @@ public class Island implements CommandExecutor {
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Lapis")) {
 
-		player.sendMessage(C.yellow + "Teleporting to" + C.blue + " Lapis " + C.yellow + "Island!");
+		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold + "Teleporting to" + C.blue + " Lapis " + C.gold+ "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
 		Location loc = new Location(Skyworld, -508, 146, 182);
@@ -94,7 +94,7 @@ public class Island implements CommandExecutor {
 		
 	}else if(plugin.getConfig().get("Player-Data." + player.getUniqueId() + ".Level").equals("Quartz")) {
 
-		player.sendMessage(C.yellow + "Teleporting to" + C.gray + " Quartz " + C.yellow + "Island!");
+		player.sendMessage(C.gray + "[" + C.red + "Teleport" + C.gray + "]: " + C.gold+ "Teleporting to" + C.gray + " Quartz " + C.gold+ "Island!");
 		
 		World Skyworld = Bukkit.getWorld("Skyworld");
 		Location loc = new Location(Skyworld, -508, 146, 182);
