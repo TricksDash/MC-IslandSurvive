@@ -9,3 +9,5 @@ commands:
     description: Refer a player on the server
   upgrade:
     description: Upgrades your Mining area
+  island:
+    description: Teleport to your mining island

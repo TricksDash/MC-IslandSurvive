@@ -8,7 +8,11 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
+import org.bukkit.scoreboard.Team;
 
+import com.islandsurvive.commands.Island;
 import com.islandsurvive.commands.Profile;
 import com.islandsurvive.commands.Refer;
 import com.islandsurvive.commands.Upgrade;
@@ -43,6 +47,13 @@ public class Core extends JavaPlugin {
 	
 	if(!setupEconomy()){
 	Bukkit.shutdown();
+	
+	ScoreboardManager manager = Bukkit.getScoreboardManager();
+	Scoreboard board = manager.getNewScoreboard();
+	
+	Team admin = board.registerNewTeam("Admin");
+	
+	admin.setPrefix(C.yellow + "*" + C.red);
 	}
 
 	logger.info(pdfFile.getName() + "Has been enabled - Version " + pdfFile.getVersion());	
@@ -59,6 +70,7 @@ public void registerCommands() {
 	getCommand("profile").setExecutor(new Profile(this));
 	getCommand("refer").setExecutor(new Refer(this));
 	getCommand("upgrade").setExecutor(new Upgrade(this));
+	getCommand("island").setExecutor(new Island(this));
 }
 
 public void registerEvents() {
